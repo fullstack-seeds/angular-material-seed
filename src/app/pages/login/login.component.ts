@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['pages']);
   }
 
-  signup(event) {
+  register(event) {
     event.preventDefault();
-    this.router.navigate(['signup']);
+    this.router.navigate(['register']);
   }
 }
