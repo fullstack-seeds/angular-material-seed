@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ThemeModule } from '../../theme/theme.module';
+
 import { ToppingsRoutingModule } from './toppings-routing.module';
 import { ToppingsComponent } from './toppings.component';
 
@@ -9,7 +11,8 @@ import { ToppingsComponent } from './toppings.component';
   declarations: [ToppingsComponent],
   imports: [
     CommonModule,
-    ToppingsRoutingModule
+    ToppingsRoutingModule,
+    ThemeModule
   ]
 })
 export class ToppingsModule { }

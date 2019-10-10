@@ -18,6 +18,12 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['pages']);
   }
 
+  onLogin() {
+    event.preventDefault();
+    localStorage.setItem('isLoggedin', 'true');
+    this.router.navigate(['pages']);
+  }
+
   register(event) {
     event.preventDefault();
     this.router.navigate(['register']);
