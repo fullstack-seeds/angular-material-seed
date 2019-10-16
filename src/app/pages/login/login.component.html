@@ -1,20 +1,20 @@
 <div class="login-page">
     <div class="content">
-        <form class="login-form" fxFlex  >
+        <form class="login-form" fxFlex [formGroup]="form" >
             <div class="text-center">
                 <h2 class="app-name">Login</h2>
             </div>
             <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
                 <div fxFlexFill>
                     <mat-form-field class="w-100">
-                        <input matInput placeholder="Email">
+                        <input matInput placeholder="Email" formControlName="email">
                     </mat-form-field>
                 </div>
             </div>
             <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
                 <div fxFlexFill>
                     <mat-form-field class="w-100">
-                        <input matInput type="password" placeholder="Password">
+                        <input matInput type="password" placeholder="Password" formControlName="password">
                     </mat-form-field>
                 </div>
             </div>
