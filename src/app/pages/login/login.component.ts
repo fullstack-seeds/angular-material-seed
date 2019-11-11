@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this.usersService.login(this.form.value.email, this.form.value.password).subscribe(response => {
       console.log(response);
-      localStorage.setItem('isLoggedin', 'true');
+      localStorage.setItem('token', response.token);
       this.router.navigate(['pages']);
     });
   }

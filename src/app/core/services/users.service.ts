@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 
 import { ConfigService } from './config.service';
-import { User } from '../models/user.model';
+import { User, LoginResponse } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,7 @@ export class UsersService {
   }
 
   login(email: string, password: string) {
-    return this.http.post(
+    return this.http.post<LoginResponse>(
       this.config.getUrl('users/login'),
       { email, password }
     );

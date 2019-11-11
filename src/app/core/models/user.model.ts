@@ -6,3 +6,9 @@ export interface User {
     address?: string,
     phone?: string
 }
+
+export interface LoginResponse {
+    id: string,
+    name: string,
+    token: string
+}
