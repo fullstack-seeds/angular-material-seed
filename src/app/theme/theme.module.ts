@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -34,7 +35,7 @@ const MAT_MODULES = [
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [CommonModule, RouterModule, ...MAT_MODULES],
-  exports: [...COMPONENTS, ...MAT_MODULES]
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, ...MAT_MODULES],
+  exports: [...COMPONENTS, FormsModule, ReactiveFormsModule, ...MAT_MODULES]
 })
 export class ThemeModule { }
