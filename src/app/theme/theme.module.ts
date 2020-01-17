@@ -15,6 +15,7 @@ import {
   MatMenuModule,
   MatSidenavModule,
   MatToolbarModule,
+  MatCardModule,
 } from '@angular/material';
 
 const COMPONENTS = [
@@ -31,6 +32,7 @@ const MAT_MODULES = [
   MatInputModule,
   MatMenuModule,
   MatListModule,
+  MatCardModule,
 ];
 
 @NgModule({

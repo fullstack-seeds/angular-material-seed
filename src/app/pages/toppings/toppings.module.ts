@@ -5,10 +5,11 @@ import { ThemeModule } from '../../theme/theme.module';
 
 import { ToppingsRoutingModule } from './toppings-routing.module';
 import { ToppingsComponent } from './toppings.component';
+import { ToppingsListComponent } from './toppings-list/toppings-list.component';
 
 
 @NgModule({
-  declarations: [ToppingsComponent],
+  declarations: [ToppingsComponent, ToppingsListComponent],
   imports: [
     CommonModule,
     ToppingsRoutingModule,

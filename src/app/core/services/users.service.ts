@@ -39,4 +39,8 @@ export class UsersService {
   isLogin(): boolean {
     return localStorage.getItem('token') != null;
   }
+
+  getToken(): string {
+    return localStorage.getItem('token');
+  }
 }

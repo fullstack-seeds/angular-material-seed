@@ -1,0 +1,17 @@
+<div *ngIf="toppings$ | async as toppings">
+    <mat-card *ngFor="let topping of toppings" class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{topping.name}}</mat-card-title>
+            <mat-card-subtitle>$ {{topping.price}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="topping.icon" alt="photo">
+        <mat-card-content>
+            <p>{{topping.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="primary">Edit</button>
+            <button mat-button color="warn">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>
