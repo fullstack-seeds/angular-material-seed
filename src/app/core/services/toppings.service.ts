@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Topping } from '../models/topping.model';
+import { Topping, ToppingRequest } from '../models/topping.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,5 +19,9 @@ export class ToppingsService {
 
   public fetch(): Observable<Topping[]> {
     return this.http.get<Topping[]>('https://pizza-creator-api-expressjs.herokuapp.com/api/toppings', httpOptions);
+  }
+
+  public create(aTopping: ToppingRequest): Observable<Topping> {
+    return this.http.post<Topping>('https://pizza-creator-api-expressjs.herokuapp.com/api/toppings', aTopping, httpOptions);
   }
 }

@@ -1,1 +1,22 @@
-<p>topping-add works!</p>
+<h2>Create a topping</h2>
+<form class="example-container" [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Price" type="number" formControlName="price">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Icon" formControlName="icon"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
